@@ -1,0 +1,244 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+    header h1 {
+        font-size: 2em;
+        margin: 0;
+    }
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+section {
+    padding: 20px;
+}
+
+.issue-title {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.latest-pieces article h3 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+    /* Customize the styling for each category as needed */
+    .latest-pieces article h3:nth-of-type(1) {
+        color: #ff5733; /* Poetry */
+    }
+
+    .latest-pieces article h3:nth-of-type(2) {
+        color: #33a1ff; /* Short Story */
+    }
+
+    .latest-pieces article h3:nth-of-type(3) {
+        color: #ff33a1; /* Flash Fiction */
+    }
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: sticky;
+    position: -webkit-sticky;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.latest-pieces {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.latest-pieces article {
+    background-color: #fff;
+    border: 1px solid #e1e1e1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    border-radius: 10px;
+}
+.latest-pieces article .badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8em;
+}
+/* Add custom styles for each badge based on category */
+.latest-pieces article.poetry .badge {
+    background-color: #ff5733; /* Poetry */
+}
+
+.latest-pieces article.short-story .badge {
+    background-color: #33a1ff; /* Short Story */
+}
+
+.latest-pieces article.flash-fiction .badge {
+    background-color: #ff33a1; /* Flash Fiction */
+}
+
+.latest-pieces article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+}
+
+.latest-pieces article h3 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.latest-pieces article p {
+    color: #666;
+}
+
+.latest-pieces article a {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.article-content a {
+    display: flex;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 150px;
+    margin-right: auto;
+    margin-left:auto;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    
+}
+.latest-pieces article a:hover {
+    background-color: #555;
+}
+.article-text {
+    display: inline-flex;
+    padding: 10px 20px;
+    margin-top: 10px;
+    width: 100%;
+    justify-content: center;
+}
+
+.latest-pieces article .author-name a {
+    color:gray;
+    font-style: italic;
+    background-color:transparent;
+    padding: 0px;
+    text-decoration: underline;
+}
+.article-content .author-name a {
+    color:gray;
+    font-style: italic;
+    background-color:transparent;
+    padding: 0px;
+    text-decoration: underline;
+    justify-content: center;
+}
+
+
+/* Author Page Styles */
+.author-profile {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.author-info {
+    flex: 1;
+    text-align: center;
+    margin: 20px;
+    background-color: #fff;
+    border: 1px solid #e1e1e1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    border-radius: 10px;
+}
+
+.author-info img {
+    max-width: 200px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.author-info h1 {
+    margin: 10px 0;
+    font-size: 1.5em;
+}
+
+.author-info p {
+    margin: 10px 0;
+}
+
+.author-articles {
+    flex: 2;
+    margin: 20px;
+    background-color: #fff;
+    border: 1px solid #e1e1e1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    border-radius: 10px;
+}
+
+.author-articles h2 {
+    font-size: 1.5em;
+}
+
+.author-articles ul {
+    list-style: none;
+}
+
+.author-articles li {
+    margin: 10px 0;
+}
+
+
