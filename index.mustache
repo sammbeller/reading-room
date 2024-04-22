@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>The Reading Room</title>
+</head>
+<body>
+    <header>
+        <h1>The Reading Room</h1>
+        <br>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Issues</a></li>
+                <li><a href="#">Submit</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="issue-title">
+        <h1>Issue 1</h1>
+    </section>
+
+    <section class="latest-pieces">
+        {{#entries}}
+            <article class={{genre}}>
+                <div class="badge">{{genre}}</div>
+                <h3>{{genre}}: {{title}}</h3>
+                <div class="author-name"><a href="author.html">{{contributor}}</a></div>
+                <br>
+            </article>
+        {{/entries}}
+        <article class="poetry">
+            <div class="badge">Poetry</div>
+            <h3>Poetry: Piece Title 1</h3>
+            <div class="author-name"><a href="author.html">Author Name</a></div>
+            <br>
+            <p>Short Summary:</p>    
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+            <a href="page.html">Read more</a>
+        </article>
+        <article class="short-story">
+            <div class="badge">Short Story</div>
+            <h3>Piece Title 2</h3>
+            <div class="author-name"><a href="author.html">Author Name</a></div>
+            <br>
+            <p>Short Summary:</p> 
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+            <a href="page.html">Read more</a>
+        </article>
+        <article class="flash-fiction">
+            <div class="badge">Flash Fiction</div>
+            <h3>Piece Title 3</h3>
+            <div class="author-name"><a href="author.html">Author Name</a></div>
+            <br>
+            <p>Short Summary:</p> 
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+            <a href="page.html">Read more</a>
+        </article>
+        <article class="poetry">
+            <div class="badge">Poetry</div>
+            <h3>Piece Title 4</h3>
+            <div class="author-name"><a href="author.html">Author Name</a></div>
+            <br>
+            <p>Short Summary:</p> 
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+            <a href="page.html">Read more</a>
+        </article>
+        <article class="poetry">
+            <div class="badge">Poetry</div>
+            <h3>Piece Title 5</h3>
+            <div class="author-name"><a href="author.html">Author Name</a></div>
+            <br>
+            <p>Short Summary:</p> 
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+            <a href="page.html">Read more</a>
+        </article>
+        <article class="short-story">
+            <div class="badge">Short Story</div>
+            <h3>Piece Title 6</h3>
+            <div class="author-name"><a href="author.html">Author Name</a></div>
+            <br>
+            <p>Short Summary:</p> 
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+            <a href="page.html">Read more</a>
+        </article>
+        <!-- Add more articles here -->
+    </section>
+
+    <footer>
+        <p>&copy; 2023 r/litfiction</p>
+    </footer>
+</body>
+</html>
