@@ -27,12 +27,7 @@
 
     <section class="latest-pieces">
         {{#entries}}
-            <article class={{genre}}>
-                <div class="badge">{{genre}}</div>
-                <h3>{{genre}}: {{title}}</h3>
-                <div class="author-name"><a href="author.html">{{contributor}}</a></div>
-                <br>
-            </article>
+            {{>entry-box}}
         {{/entries}}
         <article class="poetry">
             <div class="badge">Poetry</div>
