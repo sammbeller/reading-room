@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <title>The Reading Room</title>
+</head>
+
+<body>
+  <header>
+    <h1>The Reading Room</h1>
+    <br>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Issues</a></li>
+        <li><a href="#">Submit</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="article-content">
+    <section class="issue-title">
+      <h1>Cherrystone</h1>
+      <div class="author-name"><a href="author.html">{{contributor}}</a></div>
+    </section>
+    <div class="article-text">
+      <div class={{genre}}>
+        {{>entry}}
+      </div>
+    </div>
+    <a href="/index.html">Back to Pieces</a>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 r/litfiction</p>
+  </footer>
+</body>
+
+</html>

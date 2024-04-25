@@ -8,5 +8,5 @@ export function processPoemIntoPartial(poemBody) {
       return line + "<br />";
     }
   });
-  return [`<p class="stanza">`] + modifiedLines + [`</p>`];
+  return ([`<p class="stanza">`] + modifiedLines + [`</p>`]).join("\n");
 }
