@@ -22,9 +22,15 @@ issue1View.entries.forEach((entry) => {
   if (!fs.existsSync(`build/contributor/${entry.contributor}`)) {
     fs.mkdirSync(`build/contributor/${entry.contributor}`);
   }
-  const text = fs.readFileSync(entry.entryURL() + ".txt", "utf-8");
-  const partial = processPoemIntoPartial(text);
   const template = fs.readFileSync("templates/entry.mustache", "utf-8");
+
+  let partial;
+  if (entry.genre === "poetry") {
+    const text = fs.readFileSync(entry.entryURL() + ".txt", "utf-8");
+    partial = processPoemIntoPartial(text);
+  } else {
+    partial = fs.readFileSync(entry.entryURL() + ".mustache", "utf-8");
+  }
 
   const entryContent = mustache.render(template, entry, {
     entry: partial,
