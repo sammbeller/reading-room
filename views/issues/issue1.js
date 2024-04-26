@@ -3,24 +3,36 @@ export default {
   entries: [
     {
       contributor: "cs",
-      displayGenre: function() { return this.genre.slice(0,1).toUpperCase() + this.genre.slice(1) },
-      entryURL: function() { return "contributor/" + this.contributor + "/" + this.title + ".html" },
+      displayGenre: function () {
+        return this.genre.slice(0, 1).toUpperCase() + this.genre.slice(1);
+      },
+      entryURL: function () {
+        return "contributor/" + this.contributor + "/" + this.title;
+      },
       genre: "poetry",
-      title: "untitled"
+      title: "untitled",
     },
     {
       contributor: "roderic",
-      displayGenre: function() { return this.genre.slice(0,1).toUpperCase() + this.genre.slice(1) },
-      entryURL: function() { return "contributor/" + this.contributor + "/" + this.title + ".html" },
+      displayGenre: function () {
+        return this.genre.slice(0, 1).toUpperCase() + this.genre.slice(1);
+      },
+      entryURL: function () {
+        return "contributor/" + this.contributor + "/" + this.title;
+      },
       genre: "poetry",
-      title: "endospore"
+      title: "endospore",
     },
     {
       contributor: "sleazy-b",
-      displayGenre: function() { return this.genre.slice(0,1).toUpperCase() + this.genre.slice(1) },
-      entryURL: function() { return "contributor/" + this.contributor + "/" + this.title + ".html" },
+      displayGenre: function () {
+        return this.genre.slice(0, 1).toUpperCase() + this.genre.slice(1);
+      },
+      entryURL: function () {
+        return "contributor/" + this.contributor + "/" + this.title;
+      },
       genre: "poetry",
-      title: "Cherrystone"
+      title: "Cherrystone",
     },
-  ]
+  ],
 };
