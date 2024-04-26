@@ -163,13 +163,13 @@ footer {
   width: 100%;
 }
 
-.article-text.fiction p {
+.article-text .fiction p {
   flex-direction: column;
   min-width: 40%;
   max-width: 60%;
 }
 
-.article-text.poetry .poem .stanza {
+.article-text .poetry .stanza {
   margin: 8px 0;
 }
 
