@@ -7,7 +7,8 @@ export default {
         return this.genre.slice(0, 1).toUpperCase() + this.genre.slice(1);
       },
       entryURL: function () {
-        return "contributor/" + this.contributor + "/" + this.title;
+        const titleForURL = this.title.toLowerCase().split(" ").join("-");
+        return "contributor/" + this.contributor + "/" + titleForURL;
       },
       genre: "poetry",
       title: "untitled",
@@ -18,7 +19,8 @@ export default {
         return this.genre.slice(0, 1).toUpperCase() + this.genre.slice(1);
       },
       entryURL: function () {
-        return "contributor/" + this.contributor + "/" + this.title;
+        const titleForURL = this.title.toLowerCase().split(" ").join("-");
+        return "contributor/" + this.contributor + "/" + titleForURL;
       },
       genre: "poetry",
       title: "endospore",
@@ -29,10 +31,23 @@ export default {
         return this.genre.slice(0, 1).toUpperCase() + this.genre.slice(1);
       },
       entryURL: function () {
-        return "contributor/" + this.contributor + "/" + this.title;
+        const titleForURL = this.title.toLowerCase().split(" ").join("-");
+        return "contributor/" + this.contributor + "/" + titleForURL;
       },
       genre: "poetry",
       title: "Cherrystone",
+    },
+    {
+      contributor: "pinkbubblesgo",
+      displayGenre: function () {
+        return this.genre.slice(0, 1).toUpperCase() + this.genre.slice(1);
+      },
+      entryURL: function () {
+        const titleForURL = this.title.toLowerCase().split(" ").join("-");
+        return "contributor/" + this.contributor + "/" + titleForURL;
+      },
+      genre: "fiction",
+      title: "Mick is My Darling",
     },
   ],
 };
