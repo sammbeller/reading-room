@@ -3,10 +3,10 @@ export function processPoemIntoPartial(poemBody) {
   const trimmedLines = lines.map((line) => line.trim());
   const modifiedLines = trimmedLines.map((line) => {
     if (line.length === 0) {
-      return `<\p><p class="stanza">`;
+      return String.raw`</p><p class="stanza">`;
     } else {
       return line + "<br />";
     }
   });
-  return ([`<p class="stanza">`] + modifiedLines + [`</p>`]).join("\n");
+  return [`<p class="stanza">`].concat(modifiedLines, [`</p>`]).join("\n");
 }
