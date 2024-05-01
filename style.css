@@ -169,6 +169,21 @@ footer {
   max-width: 60%;
 }
 
+.article-text .fiction .chapter-heading {
+  display: block;
+  text-align: center;
+}
+
+.article-text .fiction .epigraph {
+  margin: 3% 0;
+  text-align: center;
+}
+
+.article-text .fiction .fiction-content {
+  margin: 1.5% 0;
+  text-indent: 3%;
+}
+
 .article-text .poetry .stanza {
   margin: 8px 0;
 }

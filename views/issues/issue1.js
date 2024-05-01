@@ -12,6 +12,7 @@ export default {
   entries: [
     {
       contributor: "cs",
+      displayContributor: "CS",
       displayGenre,
       entryURL,
       genre: "poetry",
@@ -19,6 +20,7 @@ export default {
     },
     {
       contributor: "roderic",
+      displayContributor: "Roederic",
       displayGenre,
       entryURL,
       genre: "poetry",
@@ -26,6 +28,7 @@ export default {
     },
     {
       contributor: "sleazy-b",
+      displayContributor: "sleazy-b",
       displayGenre,
       entryURL,
       genre: "poetry",
@@ -33,10 +36,19 @@ export default {
     },
     {
       contributor: "pinkbubblesgo",
+      displayContributor: "pinkbubblesgo",
       displayGenre,
       entryURL,
       genre: "fiction",
       title: "Mick is My Darling",
+    },
+    {
+      contributor: "g-michael-rapp",
+      displayContributor: "G. Michael Rapp",
+      displayGenre,
+      entryURL,
+      genre: "fiction",
+      title: "Cherry Pie",
     },
   ],
 };
