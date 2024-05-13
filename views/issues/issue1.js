@@ -3,8 +3,7 @@ function displayGenre() {
 }
 
 function entryURL() {
-  const titleForURL = this.title.toLowerCase().split(" ").join("-");
-  return "contributor/" + this.contributor + "/" + titleForURL;
+  return "contributor/" + this.contributor + "/" + this.title;
 }
 
 export default {
@@ -14,6 +13,7 @@ export default {
       contributor: "cs",
       displayContributor: "CS",
       displayGenre,
+      displayTitle: "untitled",
       entryURL,
       genre: "poetry",
       title: "untitled",
@@ -22,6 +22,7 @@ export default {
       contributor: "roderic",
       displayContributor: "Roederic",
       displayGenre,
+      displayTitle: "Endospore",
       entryURL,
       genre: "poetry",
       title: "endospore",
@@ -30,25 +31,28 @@ export default {
       contributor: "sleazy-b",
       displayContributor: "sleazy-b",
       displayGenre,
+      displayTitle: "Cherrystone",
       entryURL,
       genre: "poetry",
-      title: "Cherrystone",
+      title: "cherrystone",
     },
     {
       contributor: "pinkbubblesgo",
       displayContributor: "pinkbubblesgo",
       displayGenre,
+      displayTitle: "Mick is My Darling",
       entryURL,
       genre: "fiction",
-      title: "Mick is My Darling",
+      title: "mick-is-my-darling",
     },
     {
       contributor: "g-michael-rapp",
       displayContributor: "G. Michael Rapp",
       displayGenre,
+      title: "Cherry Pie",
       entryURL,
       genre: "fiction",
-      title: "Cherry Pie",
+      title: "cherry-pie",
     },
   ],
 };
