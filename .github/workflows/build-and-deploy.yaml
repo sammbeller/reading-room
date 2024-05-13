@@ -10,12 +10,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.11.1'
       - name: Create `build` directory
         run: npm run clean && npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: build/
+          path: "build/"
   deploy:
     environment:
       name: github-pages
