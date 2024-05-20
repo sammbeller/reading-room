@@ -12,6 +12,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "mustache": "^4.2.0"
+    "mustache": "^4.2.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
   }
 }
