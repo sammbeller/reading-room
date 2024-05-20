@@ -1,7 +1,7 @@
 import fs from "fs";
 import mustache from "mustache";
-import { processPoemIntoPartial } from "./processIntoPartial.js";
-import issue1View from "./views/issues/issue1.js";
+import { processPoemIntoPartial } from "./processIntoPartial";
+import issue1View from "./views/issues/issue1";
 
 if (!fs.existsSync("build")) {
   fs.mkdirSync("build");

@@ -1,4 +1,4 @@
-export function processPoemIntoPartial(poemBody) {
+export function processPoemIntoPartial(poemBody: string) {
   const lines = poemBody.split("\n");
   const trimmedLines = lines.map((line) => line.trim());
   const modifiedLines = trimmedLines.map((line) => {
