@@ -163,6 +163,18 @@ footer {
   width: 100%;
 }
 
+.article-text .script-speaker {
+  text-align: center;
+}
+
+.article-text .script-dialogue {
+  padding: 0 20%;
+}
+
+.article-text p {
+  margin: 1.5% 0;
+}
+
 .article-text .fiction {
   flex-direction: column;
   min-width: 40%;
@@ -180,7 +192,6 @@ footer {
 }
 
 .article-text .fiction .fiction-content {
-  margin: 1.5% 0;
   text-indent: 3%;
 }
 
