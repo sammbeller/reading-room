@@ -1,6 +1,5 @@
 import fs from "fs";
 import mustache from "mustache";
-import { processPoemIntoPartial } from "./processIntoPartial";
 import issue1View from "./views/issues/issue1";
 
 if (!fs.existsSync("build")) {
@@ -23,14 +22,7 @@ issue1View.entries.forEach((entry) => {
     fs.mkdirSync(`build/contributor/${entry.contributor}`);
   }
   const template = fs.readFileSync("templates/entry.mustache", "utf-8");
-
-  let partial;
-  if (entry.genre === "poetry") {
-    const text = fs.readFileSync(entry.entryURL() + ".txt", "utf-8");
-    partial = processPoemIntoPartial(text);
-  } else {
-    partial = fs.readFileSync(entry.entryURL() + ".mustache", "utf-8");
-  }
+  const partial = fs.readFileSync(entry.entryURL() + ".mustache", "utf-8");
 
   const entryContent = mustache.render(template, entry, {
     entry: partial,
