@@ -1,4 +1,5 @@
 import fs from "fs";
+import path from "path";
 import mustache from "mustache";
 import issue1View from "./views/issues/issue1";
 
@@ -18,6 +19,7 @@ fs.writeFileSync("build/index.html", indexContent);
 fs.mkdirSync("build/contributor");
 
 issue1View.entries.forEach((entry) => {
+  // Build and write the entry template
   if (!fs.existsSync(`build/contributor/${entry.contributor}`)) {
     fs.mkdirSync(`build/contributor/${entry.contributor}`);
   }
@@ -28,4 +30,27 @@ issue1View.entries.forEach((entry) => {
     entry: partial,
   });
   fs.writeFileSync("build/" + entry.entryURL() + ".html", entryContent);
+
+  // Find additional content and move it over
+  if (entry.hasAdditionalContent && entry.hasAdditionalContent.length > 0) {
+    entry.hasAdditionalContent.forEach((additionalContent) => {
+      const basePath = `contributor/${entry.contributor}`;
+      const additionalContentPath = path.join(basePath, additionalContent);
+      if (!fs.existsSync(additionalContentPath)) {
+        console.warn(
+          `Could not find additional content for ${entry.entryURL()}: ${additionalContent}`
+        );
+      } else {
+        console.log(
+          `Adding additional content for ${entry.entryURL()}: ${additionalContent}`
+        );
+        const additionalContentTargetPath = path.join(
+          "build/contributor",
+          entry.contributor,
+          additionalContent
+        );
+        fs.copyFileSync(additionalContentPath, additionalContentTargetPath);
+      }
+    });
+  }
 });

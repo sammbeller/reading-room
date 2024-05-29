@@ -86,10 +86,17 @@ const issue: Issue = {
       displayTitle: "Untitled",
       entryURL,
       genre: "poetry",
-      // hasAdditionalContent: [
-
-      // ],
       title: "untitled",
+    },
+    {
+      contributor: "in-limbo",
+      displayContributor: "InLimbo",
+      displayGenre,
+      displayTitle: "distinction",
+      entryURL,
+      genre: "fiction",
+      hasAdditionalContent: ["distinction.pdf"],
+      title: "distinction",
     },
   ],
 };
