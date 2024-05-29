@@ -13,6 +13,7 @@ export interface Entry {
   displayTitle: string;
   entryURL: () => string;
   genre: string;
+  hasAdditionalContent?: string[];
   title: string;
 }
 
@@ -77,6 +78,18 @@ const issue: Issue = {
       entryURL,
       genre: "fiction",
       title: "53-seconds",
+    },
+    {
+      contributor: "in-limbo",
+      displayContributor: "InLimbo",
+      displayGenre,
+      displayTitle: "Untitled",
+      entryURL,
+      genre: "poetry",
+      // hasAdditionalContent: [
+
+      // ],
+      title: "untitled",
     },
   ],
 };

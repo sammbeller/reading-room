@@ -199,6 +199,10 @@ footer {
   margin: 8px 0;
 }
 
+.article-text .poetry .stanza {
+  text-align: right;
+}
+
 .latest-pieces article .author-name a {
   color: gray;
   font-style: italic;
