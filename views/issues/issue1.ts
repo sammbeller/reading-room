@@ -98,6 +98,24 @@ const issue: Issue = {
       hasAdditionalContent: ["distinction.pdf"],
       title: "distinction",
     },
+    {
+      contributor: "john-gu",
+      displayContributor: "John Gu",
+      displayGenre,
+      displayTitle: "The Train from Amsterdam",
+      entryURL,
+      genre: "fiction",
+      title: "the-train-from-amsterdam",
+    },
+    {
+      contributor: "john-gu",
+      displayContributor: "John Gu",
+      displayGenre,
+      displayTitle: "Sara",
+      entryURL,
+      genre: "fiction",
+      title: "sara",
+    }
   ],
 };
 
