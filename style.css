@@ -199,7 +199,7 @@ footer {
   margin: 8px 0;
 }
 
-.article-text .poetry .stanza {
+.article-text .poetry .stanza.right-aligned {
   text-align: right;
 }
 
