@@ -115,7 +115,16 @@ const issue: Issue = {
       entryURL,
       genre: "fiction",
       title: "sara",
-    }
+    },
+    {
+      contributor: "jetgirl",
+      displayContributor: "JetGirl",
+      displayGenre,
+      displayTitle: "Sara",
+      entryURL,
+      genre: "fiction",
+      title: "the-date",
+    },
   ],
 };
 
