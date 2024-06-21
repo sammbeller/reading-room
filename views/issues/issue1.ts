@@ -120,7 +120,7 @@ const issue: Issue = {
       contributor: "jetgirl",
       displayContributor: "JetGirl",
       displayGenre,
-      displayTitle: "Sara",
+      displayTitle: "The Date",
       entryURL,
       genre: "fiction",
       title: "the-date",
