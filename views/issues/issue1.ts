@@ -104,7 +104,7 @@ const issue: Issue = {
       displayGenre,
       displayTitle: "The Train from Amsterdam",
       entryURL,
-      genre: "fiction",
+      genre: "nonfiction",
       title: "the-train-from-amsterdam",
     },
     {
@@ -113,7 +113,7 @@ const issue: Issue = {
       displayGenre,
       displayTitle: "Sara",
       entryURL,
-      genre: "fiction",
+      genre: "nonfiction",
       title: "sara",
     },
     {
