@@ -93,6 +93,17 @@ footer {
   position: relative;
   transition: transform 0.2s, box-shadow 0.2s;
 }
+
+.latest-pieces article>div:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.latest-pieces article>div:first-child>a {
+  align-self: baseline;
+}
+
 .latest-pieces article .badge {
   background-color: #333;
   border-radius: 20px;
