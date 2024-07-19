@@ -36,7 +36,7 @@ const issue: Issue = {
     },
     {
       contributor: "roderic",
-      displayContributor: "Roederic",
+      displayContributor: "Roderic",
       displayGenre,
       displayTitle: "Endospore",
       entryURL,
