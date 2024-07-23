@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import mustache from "mustache";
-import { view } from "./views/view";
+import { getView } from "./views/view";
 
 if (!fs.existsSync("build")) {
   fs.mkdirSync("build");
@@ -14,7 +14,7 @@ const htmlHeaderPartial = fs.readFileSync(
   "partials/html-header.mustache",
   "utf-8"
 );
-const issue1View = view.issues[0].toObject();
+const issue1View = getView().issues[0].toObject();
 
 const indexContent = mustache.render(indexTemplate, issue1View, {
   "entry-box": entryBoxPartial,

@@ -1,8 +1,3 @@
-const URLBase = process.env.LITFIC_BASE;
-if (!URLBase) {
-  throw new Error("No LITFIC_BASE env variable defined");
-}
-
 function formatForDisplay(input: string): string {
   return input
     .split("-")
@@ -118,73 +113,80 @@ export class View {
   }
 }
 
-export const view: View = new View(URLBase, [
-  new Issue(URLBase, [
-    new Entry(URLBase, {
-      contributor: "cs",
-      displayContributor: "CS",
-      displayTitle: "untitled",
-      genre: "poetry",
-      title: "untitled",
-    }),
-    new Entry(URLBase, {
-      contributor: "roderic",
-      genre: "poetry",
-      title: "endospore",
-    }),
-    new Entry(URLBase, {
-      contributor: "sleazy-b",
-      displayContributor: "sleazy-b",
-      genre: "poetry",
-      title: "cherrystone",
-    }),
-    new Entry(URLBase, {
-      contributor: "pinkbubblesgo",
-      displayContributor: "pinkbubblesgo",
-      genre: "fiction",
-      title: "mick-is-my-darling",
-    }),
-    new Entry(URLBase, {
-      contributor: "g-michael-rapp",
-      displayContributor: "G. Michael Rapp",
-      genre: "fiction",
-      title: "cherry-pie",
-    }),
-    new Entry(URLBase, {
-      contributor: "fujin-takama",
-      genre: "fiction",
-      title: "53-seconds",
-    }),
-    new Entry(URLBase, {
-      contributor: "in-limbo",
-      displayContributor: "InLimbo",
-      genre: "poetry",
-      title: "untitled",
-    }),
-    new Entry(URLBase, {
-      contributor: "in-limbo",
-      displayContributor: "InLimbo",
-      displayTitle: "distinction",
-      genre: "fiction",
-      additionalContent: ["distinction.pdf"],
-      title: "distinction",
-    }),
-    new Entry(URLBase, {
-      contributor: "john-gu",
-      displayTitle: "The Train from Amsterdam",
-      genre: "nonfiction",
-      title: "the-train-from-amsterdam",
-    }),
-    new Entry(URLBase, {
-      contributor: "john-gu",
-      genre: "nonfiction",
-      title: "sara",
-    }),
-    new Entry(URLBase, {
-      contributor: "jetgirl",
-      displayContributor: "JetGirl",
-      genre: "fiction",
-      title: "the-date",
-    }),
-  ]),
-]);
+export function getView(): View {
+  const URLBase = process.env.LITFIC_BASE;
+  if (!URLBase) {
+    throw new Error("No LITFIC_BASE env variable defined");
+  }
+
+  return new View(URLBase, [
+    new Issue(URLBase, [
+      new Entry(URLBase, {
+        contributor: "cs",
+        displayContributor: "CS",
+        displayTitle: "untitled",
+        genre: "poetry",
+        title: "untitled",
+      }),
+      new Entry(URLBase, {
+        contributor: "roderic",
+        genre: "poetry",
+        title: "endospore",
+      }),
+      new Entry(URLBase, {
+        contributor: "sleazy-b",
+        displayContributor: "sleazy-b",
+        genre: "poetry",
+        title: "cherrystone",
+      }),
+      new Entry(URLBase, {
+        contributor: "pinkbubblesgo",
+        displayContributor: "pinkbubblesgo",
+        genre: "fiction",
+        title: "mick-is-my-darling",
+      }),
+      new Entry(URLBase, {
+        contributor: "g-michael-rapp",
+        displayContributor: "G. Michael Rapp",
+        genre: "fiction",
+        title: "cherry-pie",
+      }),
+      new Entry(URLBase, {
+        contributor: "fujin-takama",
+        genre: "fiction",
+        title: "53-seconds",
+      }),
+      new Entry(URLBase, {
+        contributor: "in-limbo",
+        displayContributor: "InLimbo",
+        genre: "poetry",
+        title: "untitled",
+      }),
+      new Entry(URLBase, {
+        contributor: "in-limbo",
+        displayContributor: "InLimbo",
+        displayTitle: "distinction",
+        genre: "fiction",
+        additionalContent: ["distinction.pdf"],
+        title: "distinction",
+      }),
+      new Entry(URLBase, {
+        contributor: "john-gu",
+        displayTitle: "The Train from Amsterdam",
+        genre: "nonfiction",
+        title: "the-train-from-amsterdam",
+      }),
+      new Entry(URLBase, {
+        contributor: "john-gu",
+        genre: "nonfiction",
+        title: "sara",
+      }),
+      new Entry(URLBase, {
+        contributor: "jetgirl",
+        displayContributor: "JetGirl",
+        genre: "fiction",
+        title: "the-date",
+      }),
+    ]),
+  ]);
+}
