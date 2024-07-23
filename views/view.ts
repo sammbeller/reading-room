@@ -20,6 +20,7 @@ export interface EntryInput {
 }
 
 export type EntryOutput = EntryInput & {
+  base: string;
   contributorURL: string;
   displayGenre: string;
   entryFile: string;
@@ -28,14 +29,16 @@ export type EntryOutput = EntryInput & {
 
 export class Entry {
   additionalContent?: string[];
+  base: string;
   contributor: string;
   displayContributor: string;
   displayTitle: string;
   genre: string;
   title: string;
 
-  constructor(input: EntryInput) {
+  constructor(base: string, input: EntryInput) {
     this.additionalContent = input.additionalContent;
+    this.base = base;
     this.contributor = input.contributor;
     this.displayContributor =
       input.displayContributor ?? formatForDisplay(input.contributor);
@@ -57,6 +60,7 @@ export class Entry {
   toObject(): EntryOutput {
     return {
       additionalContent: this.additionalContent,
+      base: this.base,
       contributor: this.contributor,
       contributorURL: this.generateContributorURL("html"),
       displayContributor: this.displayContributor,
@@ -71,18 +75,22 @@ export class Entry {
 }
 
 export interface IssueOutput {
+  base: string;
   entries: EntryOutput[];
 }
 
 export class Issue {
+  base: string;
   entries: Entry[];
 
-  constructor(entries: Entry[]) {
+  constructor(base: string, entries: Entry[]) {
+    this.base = base;
     this.entries = entries;
   }
 
   toObject(): IssueOutput {
     return {
+      base: this.base,
       entries: this.entries.map((entry) => entry.toObject()),
     };
   }
@@ -110,76 +118,73 @@ export class View {
   }
 }
 
-export const view: View = new View(
-  URLBase,
-  [
-    new Issue([
-      new Entry({
-        contributor: "cs",
-        displayContributor: "CS",
-        displayTitle: "untitled",
-        genre: "poetry",
-        title: "untitled",
-      }),
-      new Entry({
-        contributor: "roderic",
-        genre: "poetry",
-        title: "endospore",
-      }),
-      new Entry({
-        contributor: "sleazy-b",
-        displayContributor: "sleazy-b",
-        genre: "poetry",
-        title: "cherrystone",
-      }),
-      new Entry({
-          contributor: "pinkbubblesgo",
-          displayContributor: "pinkbubblesgo",
-          genre: "fiction",
-          title: "mick-is-my-darling",
-      }),
-      new Entry({
-        contributor: "g-michael-rapp",
-        displayContributor: "G. Michael Rapp",
-        genre: "fiction",
-        title: "cherry-pie",
-      }),
-      new Entry({
-        contributor: "fujin-takama",
-        genre: "fiction",
-        title: "53-seconds",
-      }),
-      new Entry({
-        contributor: "in-limbo",
-        displayContributor: "InLimbo",
-        genre: "poetry",
-        title: "untitled",
-      }),
-      new Entry({
-        contributor: "in-limbo",
-        displayContributor: "InLimbo",
-        displayTitle: "distinction",
-        genre: "fiction",
-        additionalContent: ["distinction.pdf"],
-        title: "distinction",
-      }),
-      new Entry({
-        contributor: "john-gu",
-        displayTitle: "The Train from Amsterdam",
-        genre: "nonfiction",
-        title: "the-train-from-amsterdam",
-      }),
-      new Entry({
-        contributor: "john-gu",
-        genre: "nonfiction",
-        title: "sara",
-      }),
-      new Entry({
-        contributor: "jetgirl",
-        displayContributor: "JetGirl",
-        genre: "fiction",
-        title: "the-date",
-      }),
-    ]),
-  ],
-);
+export const view: View = new View(URLBase, [
+  new Issue(URLBase, [
+    new Entry(URLBase, {
+      contributor: "cs",
+      displayContributor: "CS",
+      displayTitle: "untitled",
+      genre: "poetry",
+      title: "untitled",
+    }),
+    new Entry(URLBase, {
+      contributor: "roderic",
+      genre: "poetry",
+      title: "endospore",
+    }),
+    new Entry(URLBase, {
+      contributor: "sleazy-b",
+      displayContributor: "sleazy-b",
+      genre: "poetry",
+      title: "cherrystone",
+    }),
+    new Entry(URLBase, {
+      contributor: "pinkbubblesgo",
+      displayContributor: "pinkbubblesgo",
+      genre: "fiction",
+      title: "mick-is-my-darling",
+    }),
+    new Entry(URLBase, {
+      contributor: "g-michael-rapp",
+      displayContributor: "G. Michael Rapp",
+      genre: "fiction",
+      title: "cherry-pie",
+    }),
+    new Entry(URLBase, {
+      contributor: "fujin-takama",
+      genre: "fiction",
+      title: "53-seconds",
+    }),
+    new Entry(URLBase, {
+      contributor: "in-limbo",
+      displayContributor: "InLimbo",
+      genre: "poetry",
+      title: "untitled",
+    }),
+    new Entry(URLBase, {
+      contributor: "in-limbo",
+      displayContributor: "InLimbo",
+      displayTitle: "distinction",
+      genre: "fiction",
+      additionalContent: ["distinction.pdf"],
+      title: "distinction",
+    }),
+    new Entry(URLBase, {
+      contributor: "john-gu",
+      displayTitle: "The Train from Amsterdam",
+      genre: "nonfiction",
+      title: "the-train-from-amsterdam",
+    }),
+    new Entry(URLBase, {
+      contributor: "john-gu",
+      genre: "nonfiction",
+      title: "sara",
+    }),
+    new Entry(URLBase, {
+      contributor: "jetgirl",
+      displayContributor: "JetGirl",
+      genre: "fiction",
+      title: "the-date",
+    }),
+  ]),
+]);
