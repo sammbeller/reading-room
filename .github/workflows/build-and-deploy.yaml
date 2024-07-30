@@ -4,6 +4,8 @@ on:
   push:
     branches: [ "main" ]
   workflow_dispatch:
+env:
+  LITFIC_BASE: https://sammbeller.github.io/reading-room
 jobs:
   build:
     runs-on: ubuntu-latest
