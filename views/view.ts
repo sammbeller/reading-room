@@ -71,21 +71,25 @@ export class Entry {
 
 export interface IssueOutput {
   base: string;
+  displayTitle: string;
   entries: EntryOutput[];
 }
 
 export class Issue {
   base: string;
+  displayTitle: string;
   entries: Entry[];
 
-  constructor(base: string, entries: Entry[]) {
+  constructor(base: string, displayTitle: string, entries: Entry[]) {
     this.base = base;
+    this.displayTitle = displayTitle;
     this.entries = entries;
   }
 
   toObject(): IssueOutput {
     return {
       base: this.base,
+      displayTitle: this.displayTitle,
       entries: this.entries.map((entry) => entry.toObject()),
     };
   }
@@ -120,7 +124,7 @@ export function getView(): View {
   }
 
   return new View(URLBase, [
-    new Issue(URLBase, [
+    new Issue(URLBase, "Issue 1", [
       new Entry(URLBase, {
         contributor: "cs",
         displayContributor: "CS",

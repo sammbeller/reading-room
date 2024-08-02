@@ -10,15 +10,21 @@ if (!fs.existsSync("build")) {
 
 const indexTemplate = fs.readFileSync("index.mustache", "utf-8");
 const entryBoxPartial = fs.readFileSync("partials/entry-box.mustache", "utf-8");
+const issueDisplayPartial = fs.readFileSync(
+  "partials/issue-display.mustache",
+  "utf-8"
+);
 const htmlHeaderPartial = fs.readFileSync(
   "partials/html-header.mustache",
   "utf-8"
 );
-const issue1View = getView().issues[0].toObject();
+const view = getView();
+const issue1View = view.issues[0].toObject();
 
-const indexContent = mustache.render(indexTemplate, issue1View, {
+const indexContent = mustache.render(indexTemplate, view.toObject(), {
   "entry-box": entryBoxPartial,
   "html-header": htmlHeaderPartial,
+  "issue-display": issueDisplayPartial,
 });
 fs.writeFileSync("build/index.html", indexContent);
 

@@ -16,15 +16,9 @@
         </nav>
     </header>
 
-    <section class="issue-title">
-        <h1>Issue 1</h1>
-    </section>
-
-    <section class="latest-pieces">
-        {{#entries}}
-            {{>entry-box}}
-        {{/entries}}
-    </section>
+    {{#issues}}
+        {{>issue-display}}
+    {{/issues}}
 
     <footer>
         <p>&copy; 2023 r/litfiction</p>
